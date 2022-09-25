@@ -1,0 +1,14 @@
+pipeline {
+    agent {label 'Slave2'}
+
+
+    stages {
+
+       	stage('Git') {
+            steps {
+                cleanWs()
+                checkout scm
+            }
+       }
+    }
+    }
